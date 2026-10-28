@@ -1,8 +1,8 @@
-# 🍒 SaborIA — Customer Feedback Intelligence
+# 🍒 PERCEPTA AI — Customer Feedback Intelligence
 
 **Transformando avaliações de delivery em sinais operacionais com IA generativa.**
 
-O SaborIA é um projeto de portfólio que explora como LLMs podem converter comentários livres em dados estruturados para ajudar equipes a identificar falhas, acompanhar padrões e priorizar investigações.
+O PerceptaAI é um projeto de portfólio que explora como LLMs podem converter comentários livres em dados estruturados para ajudar equipes a identificar falhas, acompanhar padrões e priorizar investigações.
 
 > **Transparência:** a base inicial contém avaliações fictícias. Sem `OPENAI_API_KEY`, a tela de análise usa um classificador heurístico de demonstração, claramente identificado na interface. Com a chave configurada, a classificação usa a API da OpenAI e Structured Outputs. Este projeto não é afiliado ao iFood e não usa dados internos da empresa.
 
