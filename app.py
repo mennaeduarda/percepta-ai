@@ -27,7 +27,7 @@ except Exception:
     pass
 
 st.set_page_config(
-    page_title="SaborIA | Customer Intelligence",
+    page_title="Percepta AI | Customer Intelligence",
     page_icon="🍒",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -56,7 +56,7 @@ div[data-testid="stVerticalBlockBorderWrapper"] { border-color: #34313b; border-
 </style>
 """, unsafe_allow_html=True)
 
-DB_PATH = os.getenv("SABORIA_DB_PATH", str(ROOT / "data" / "sabor_ia.db"))
+DB_PATH = os.getenv("PERCEPTAIA_DB_PATH", str(ROOT / "data" / "percepta_ia.db"))
 init_db(DB_PATH)
 seed_demo_data(DB_PATH)
 df = load_reviews(DB_PATH)
@@ -64,7 +64,7 @@ if not df.empty:
     df = add_priority_score(df)
 
 with st.sidebar:
-    st.markdown("## 🍒 SaborIA")
+    st.markdown("## 🍒 Percepta AI")
     st.caption("Customer Intelligence")
     st.divider()
     page = st.radio("Navegação", ["Visão geral", "Analisar comentário", "Explorar avaliações", "Sobre o projeto"], label_visibility="collapsed")
@@ -201,11 +201,11 @@ elif page == "Explorar avaliações":
     st.caption(f"{len(view)} registro(s)")
     st.dataframe(view[cols], use_container_width=True, hide_index=True)
     st.download_button("⬇️ Exportar CSV", view[cols].to_csv(index=False).encode("utf-8-sig"),
-                       file_name="sabor_ia_avaliacoes.csv", mime="text/csv")
+                       file_name="percepta_ia_avaliacoes.csv", mime="text/csv")
 
 else:
-    st.title("Sobre o SaborIA")
-    st.write("O SaborIA é um projeto de portfólio que explora como LLMs podem converter avaliações textuais em sinais estruturados para apoiar decisões operacionais.")
+    st.title("Sobre o PerceptaAI")
+    st.write("O PerceptaAI é um projeto de portfólio que explora como LLMs podem converter avaliações textuais em sinais estruturados para apoiar decisões operacionais.")
     st.markdown("""
     **Pipeline**
     1. Entrada de comentário e nota.
